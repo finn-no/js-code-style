@@ -1,0 +1,11 @@
+{
+  "name": "finn-js-code-style",
+  "version": "0.0.0",
+  "description": "Config files for FINN JavaScript style",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "FINN.no AS",
+  "license": "MIT"
+}
