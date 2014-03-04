@@ -14,18 +14,21 @@
         "assert"    : false
     },
 
+    // Enforcing
     "bitwise"       : true,
     "camelcase"     : true,
     "curly"         : true,
     "eqeqeq"        : false,
     "es3"           : false,
     "forin"         : false,
+    "freeze"        : false,
     "immed"         : true,
     "indent"        : 4,
     "latedef"       : "nofunc",
     "newcap"        : true,
     "noarg"         : true,
     "noempty"       : false,
+    "nonbsp"        : true,
     "nonew"         : true,
     "plusplus"      : false,
     "quotmark"      : true,
@@ -35,10 +38,11 @@
     "trailing"      : true,
     "maxparams"     : 3,
     "maxdepth"      : 4,
+    "maxstatements" : 10,
     "maxcomplexity" : 10,
     "maxlen"        : 120,
 
-
+    // Relaxing
     "asi"           : false,
     "boss"          : false,
     "debug"         : false,
@@ -53,8 +57,10 @@
     "laxbreak"      : true,
     "laxcomma"      : false,
     "loopfunc"      : false,
+    "maxerr"        : 100,
     "moz"           : false,
     "multistr"      : true,
+    "nottypeof"     : false,
     "proto"         : false,
     "scripturl"     : false,
     "smarttabs"     : false,
@@ -62,9 +68,19 @@
     "sub"           : false,
     "supernew"      : false,
     "validthis"     : false,
+    "noyield"       : false,
 
-
+    // Environments
     "browser"       : true,
     "devel"         : false,
-    "node"          : true
+    "node"          : true,
+    "jquery"        : false,
+    "nonstandard"   : false,
+    "prototypejs"   : false,
+
+    // Legacy
+    "nomen"         : false,
+    "onevar"        : false,
+    "passfail"      : false,
+    "white"         : false
 }
