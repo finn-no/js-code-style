@@ -18,4 +18,7 @@ Because jshint looks in current directory, then one directory higher up until yo
 	- Open prefrences
 	- Under Project Settings find: JavaScript -> Code Quality Tools -> JSHint
 	- Check off for "Enable", "Use config files" and "2.4.3"
-	- Select .jshintrc file from this project 
+	- Select .jshintrc file from this project
+
+### Wondering what all these options mean?
+[JSHint docs](http://www.jshint.com/docs/options/)
