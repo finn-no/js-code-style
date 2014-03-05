@@ -14,7 +14,7 @@
         "assert"    : false
     },
 
-    //  Enforcing
+    // Enforcing
     "bitwise"       : true,
     "camelcase"     : true,
     "curly"         : true,
@@ -27,7 +27,7 @@
     "latedef"       : "nofunc",
     "newcap"        : true,
     "noarg"         : true,
-    "noempty"       : false,
+    "noempty"       : true,
     "nonbsp"        : true,
     "nonew"         : true,
     "plusplus"      : false,
@@ -42,7 +42,7 @@
     "maxcomplexity" : 10,
     "maxlen"        : 120,
 
-    //  Relaxing
+    // Relaxing
     "asi"           : false,
     "boss"          : false,
     "debug"         : false,
@@ -70,7 +70,7 @@
     "validthis"     : false,
     "noyield"       : false,
 
-    //  Environments
+    // Environments
     "browser"       : true,
     "devel"         : false,
     "node"          : true,
@@ -78,7 +78,7 @@
     "nonstandard"   : false,
     "prototypejs"   : false,
 
-    //  Legacy
+    // Legacy
     "nomen"         : false,
     "onevar"        : false,
     "passfail"      : false,
