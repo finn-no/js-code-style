@@ -1,6 +1,6 @@
 {
   "name": "finn-js-code-style",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Config files for FINN JavaScript style",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,6 @@
   "author": "FINN.no AS",
   "license": "MIT",
   "publishConfig": {
-  	"registry":"http://npm.finntech.no/proxy/"
+    "registry": "http://npm.finntech.no/proxy/"
   }
 }
