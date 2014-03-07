@@ -1,6 +1,6 @@
 {
   "name": "finn-js-code-style",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Config files for FINN JavaScript style",
   "main": "index.js",
   "scripts": {
