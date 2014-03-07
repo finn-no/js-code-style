@@ -7,5 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "FINN.no AS",
-  "license": "MIT"
+  "license": "MIT",
+  "private": "true",
+  "publishConfig": {
+  	"registry":"http://npm.finntech.no/proxy/"
+  }
 }
