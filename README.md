@@ -20,12 +20,11 @@ Because jshint looks in current directory, then one directory higher up until yo
 
 ## For Intellij
 
-$ git clone ssh://git@git.finn.no:7999/tool/js-code-style.git
-
-	- Open prefrences
-	- Under Project Settings find: JavaScript -> Code Quality Tools -> JSHint
-	- Check off for "Enable", "Use config files" and "2.4.3"
-	- Select .jshintrc file from this project
+	- Clone this project ($ git clone ssh://git@git.finn.no:7999/tool/js-code-style.git).
+	- Open prefrences.
+	- Under Project Settings find: JavaScript -> Code Quality Tools -> JSHint.
+	- Check off for "Enable", "Use config files" and "2.4.3".
+	- Select the file .jshintrc from js-code-style project.
 
 
 ### Wondering what all these options mean?
