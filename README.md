@@ -28,4 +28,5 @@ Because jshint looks in current directory, then one directory higher up until yo
 
 
 ### Wondering what all these options mean?
+[Lint Error Explanations](http://jslinterrors.com/)
 [JSHint docs](http://www.jshint.com/docs/options/)
