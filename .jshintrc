@@ -60,7 +60,7 @@
     "maxerr"        : 100,
     "moz"           : false,
     "multistr"      : true,
-    "nottypeof"     : false,
+    "notypeof"      : false,
     "proto"         : false,
     "scripturl"     : false,
     "smarttabs"     : false,
