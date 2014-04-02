@@ -14,7 +14,6 @@
         "assert"    : false
     },
 
-    // Enforcing
     "bitwise"       : true,
     "camelcase"     : true,
     "curly"         : true,
@@ -42,7 +41,6 @@
     "maxcomplexity" : 10,
     "maxlen"        : 120,
 
-    // Relaxing
     "asi"           : false,
     "boss"          : false,
     "debug"         : false,
@@ -70,7 +68,6 @@
     "validthis"     : false,
     "noyield"       : false,
 
-    // Environments
     "browser"       : true,
     "devel"         : false,
     "node"          : true,
@@ -78,7 +75,6 @@
     "nonstandard"   : false,
     "prototypejs"   : false,
 
-    // Legacy
     "nomen"         : false,
     "onevar"        : false,
     "passfail"      : false,
