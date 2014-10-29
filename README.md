@@ -53,6 +53,12 @@ You can also use `extends` to have different config for tests or similar:
 
 Use the `.jshintignore` to exclude files or folders.
 
+## In code
+You can pass in the path to the config file to the jshint module in order to make jshint use the finn file
+
+	var jshint = require('jshint');
+	jshint('./node_modules/finn-js-code-style/.jshintrc')
+
 ## For Sublime
 
     - Install plugin...
