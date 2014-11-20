@@ -1,2 +1,3 @@
-//
-console.log('Nothing to see here yet');
+#!/usr/bin/env node
+
+require("../lib/cli.js")(process.argv);
