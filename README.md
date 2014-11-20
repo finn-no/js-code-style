@@ -9,15 +9,6 @@ Add a pull-request if you want to change something and we can discuss on the pul
 
     npm install --save-dev finn-js-code-style
 
-### Maven projects
-
-For projects building with maven, you need to make sure the frontend-maven-plugin has specified npm.finntech.no as npm repository. See https://git.finn.no/projects/LIBS/repos/analytics-js/browse/pom.xml for an example.
-
-## Running
-Because jshint looks in current directory, then one directory higher up until your root-directory, it will not find the .jshint file in the node-modules folder. So you have to specify the config in the JSHint plugin you're using. From command-line:
-
-    jshint --config node_modules/finn-js-code-style/.jshintrc ...
-
 ## For Sublime
 
 	- Install plugin...
