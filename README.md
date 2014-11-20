@@ -9,27 +9,25 @@ Add a pull-request if you want to change something and we can discuss on the pul
 
     npm install --save-dev finn-js-code-style
 
-## For Sublime
+## Use
 
-	- Install plugin...
+This command will run jshint on the files you specify. In the future, it will probably do more code style checks on the same set of files.
 
-## For Intellij
+    finn-js-code-style file [...]
 
-	- Clone this project ($ git clone ssh://git@git.finn.no:7999/tool/js-code-style.git).
-	- Open prefrences in Intellij.
-	- Under Project Settings find: JavaScript -> Code Quality Tools -> JSHint.
-	- Check off for "Enable", "Use config files" and "2.4.3".
-	- Select the file .jshintrc from js-code-style project.
+## Config
 
+The config should be in the dot-files instead of hard-coded in build scripts. That makes it possible for editor plugins to auto-detect the config.
 
-## Wondering what all these options mean?
+If you already have a `.jshintrc` file; add the line below and remove all old rules. If you don't have it, finn-js-code-style will generate it the first time you run the command.
 
-[JSHint docs](http://www.jshint.com/docs/options/)
+    "extend": "./node_modules/finn-js-code-style/.jshintrc"
 
-## Customizing the config
+The `extend` option became usable in [jshint v2.5.1](https://github.com/jshint/jshint/releases/tag/2.5.1), so make sure the version you use (also editor plugins) at least have this version.
 
 It is possible to extend js-code-style with a project-specific config, but we only allow a more strict set of rules or change the environment (node/browser).
-To use the `extend` config option, you need at least [jshint v2.5.1](https://github.com/jshint/jshint/releases/tag/2.5.1). Examples on how to use it:
+
+You can also use `extend` to have different config for tests or similar:
 
 ./.jshintrc
 
@@ -53,10 +51,27 @@ To use the `extend` config option, you need at least [jshint v2.5.1](https://git
         }
     }
 
+Use the `.jshintignore` to exclude files or folders.
+
+## For Sublime
+
+    - Install plugin...
+
+## For Intellij
+
+    - Open prefrences in Intellij.
+    - Under Project Settings find: JavaScript -> Code Quality Tools -> JSHint.
+    - Check off for "Enable", "Use config files" and "2.5.6".
+
+
+## Wondering what all these options mean?
+
+See [JSHint docs](http://www.jshint.com/docs/options/)
+
 
 ## Inline configuration
 
-Once in a while you *have* to override the rules. For instance `eval` is evil, but maybe you actually have to use it for something that is not possible to solve in another way. Like async loading of advertisement, or actually generating dynamic code, which `eval` was meant for (but abused).
+Once in a while you *have* to override a rule in just one file. For instance `eval` is evil, but maybe you actually have to use it for something that is not possible to solve in another way. Like async loading of advertisement, or actually generating dynamic code, which `eval` was meant for (but abused).
 
 In addition to using configuration files you can configure JSHint from within your files using special comments. These comments start either with jshint or global and are followed by a comma-separated list of values. For example, the following snippet will enable warnings about undefined and unused variables and tell JSHint about a global variable named MY_GLOBAL.
 
