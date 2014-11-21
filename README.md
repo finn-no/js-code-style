@@ -21,13 +21,13 @@ The config should be in the dot-files instead of hard-coded in build scripts. Th
 
 If you already have a `.jshintrc` file; add the line below and remove all old rules. If you don't have it, finn-js-code-style will generate it the first time you run the command.
 
-    "extend": "./node_modules/finn-js-code-style/.jshintrc"
+    "extends": "./node_modules/finn-js-code-style/.jshintrc"
 
-The `extend` option became usable in [jshint v2.5.1](https://github.com/jshint/jshint/releases/tag/2.5.1), so make sure the version you use (also editor plugins) at least have this version.
+The `extends` option became usable in [jshint v2.5.1](https://github.com/jshint/jshint/releases/tag/2.5.1), so make sure the version you use (also editor plugins) at least have this version.
 
 It is possible to extend js-code-style with a project-specific config, but we only allow a more strict set of rules or change the environment (node/browser).
 
-You can also use `extend` to have different config for tests or similar:
+You can also use `extends` to have different config for tests or similar:
 
 ./.jshintrc
 
