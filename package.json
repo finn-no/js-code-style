@@ -12,7 +12,7 @@
   "author": "FINN.no AS",
   "license": "MIT",
   "publishConfig": {
-    "registry": "http://npm.finntech.no/internal/"
+    "registry": "http://mavenproxy.finntech.no/finntech-internal-npm/"
   },
   "devDependencies": {
     "jscs": "^1.7.3",
