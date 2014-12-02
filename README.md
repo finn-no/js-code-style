@@ -13,7 +13,7 @@ Add a pull-request if you want to change something and we can discuss on the pul
 
 This command will run jshint on the files you specify. In the future, it will probably do more code style checks on the same set of files.
 
-    finn-js-code-style file [...]
+    finn-js-code-style <file | dir>...
 
 ## Config
 
@@ -25,7 +25,7 @@ If you already have a `.jshintrc` file; add the line below and remove all old ru
 
 The `extends` option became usable in [jshint v2.5.1](https://github.com/jshint/jshint/releases/tag/2.5.1), so make sure the version you use (also editor plugins) at least have this version.
 
-It is possible to extend js-code-style with a project-specific config, but we only allow a more strict set of rules or change the environment (node/browser).
+It is possible to extend js-code-style with a project-specific config, but we only allow a more strict set of rules or change the environment (node/browser). The project globals should also be defined here (if you have any), and will extend the parent´s globals (instead of overwriting).
 
 You can also use `extends` to have different config for tests or similar:
 
