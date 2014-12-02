@@ -1,6 +1,6 @@
 {
   "name": "finn-js-code-style",
-  "version": "4.0.1",
+  "version": "4.1.0",
   "description": "Config files for FINN JavaScript style",
   "main": "lib/cli.js",
   "bin": {
@@ -12,11 +12,11 @@
   "author": "FINN.no AS",
   "license": "MIT",
   "repository": {
-      "type": "git",
-      "url": "https://github.com/finn-no/js-code-style"
+    "type": "git",
+    "url": "https://github.com/finn-no/js-code-style"
   },
   "bugs": {
-      "url": "https://github.com/finn-no/js-code-style/issues"
+    "url": "https://github.com/finn-no/js-code-style/issues"
   },
   "devDependencies": {
     "jscs": "^1.7.3",
