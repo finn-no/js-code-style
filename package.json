@@ -11,6 +11,13 @@
   },
   "author": "FINN.no AS",
   "license": "MIT",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/finn-no/js-code-style"
+  },
+  "bugs": {
+      "url": "https://github.com/finn-no/js-code-style/issues"
+  },
   "devDependencies": {
     "jscs": "^1.7.3",
     "lab": "^5.0.1"
