@@ -90,3 +90,11 @@ See [JSHint docs](http://www.jshint.com/docs/options/)
 
 
 [More jshint docs](http://www.jshint.com/docs/)
+
+## Release a new version
+
+    git pull --rebase
+    npm version [<newversion> | major | minor | patch] # follow semver!
+    git push --follow-tags origin master
+    npm login # login with finn-no credentials
+    npm publish
