@@ -1,7 +1,9 @@
-# FINN JavaScript code style
+# FINN.no JavaScript code style
+
+This project is meant for internal JS-code at FINN.no, but we have many public JS projects which also want to use the same code style. Feel free to use/fork, but it probably will become very FINN specific, so we don't expect it to be very useful for others.
 
 ## Just a start...
-The JSHint config is just a beginning and up for discussion. We should start easy and try to agree on a set of options that everyone think is OK. JavaScript haven't promoted any code-style, so there are a lot of personal opinions on this matter. Most of us probably have to change their style a bit. The most important is that we land on a config that everyone uses. So it's better with a lax config that everyone use than a strict config that nobody wants to use. But the main concept of linting code is to avoid potential typos, so it's a fine balance... Please be open minded about changing your code-style :)
+The JSHint config is just a beginning and up for discussion. The most important is that we land on a config that everyone uses. So it's better with a relaxed config that everyone use than a strict config that nobody wants to use. But the main concept of linting code is to avoid potential typos, so it's a fine balance...
 
 Add a pull-request if you want to change something and we can discuss on the pull-request. One pull-request pr option change. Please include the [description of the option](http://www.jshint.com/docs/options/) in the PR description :)
 
