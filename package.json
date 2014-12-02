@@ -11,9 +11,6 @@
   },
   "author": "FINN.no AS",
   "license": "MIT",
-  "publishConfig": {
-    "registry": "http://mavenproxy.finntech.no/finntech-internal-npm/"
-  },
   "devDependencies": {
     "jscs": "^1.7.3",
     "lab": "^5.0.1"
