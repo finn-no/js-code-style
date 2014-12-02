@@ -50,7 +50,7 @@
     "scripturl"     : false,
     "smarttabs"     : false,
     "shadow"        : false,
-    "sub"           : false,
+    "sub"           : true,
     "supernew"      : false,
     "validthis"     : false,
     "noyield"       : false,
