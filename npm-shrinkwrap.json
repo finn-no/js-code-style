@@ -1,11 +1,11 @@
 {
   "name": "finn-js-code-style",
-  "version": "3.1.0",
+  "version": "4.0.1",
   "dependencies": {
     "jshint": {
       "version": "2.5.10",
-      "from": "jshint@",
-      "resolved": "http://npm.finntech.no/internal/jshint/-/jshint-2.5.10.tgz",
+      "from": "jshint@2.5.10",
+      "resolved": "http://registry.npmjs.org/jshint/-/jshint-2.5.10.tgz",
       "dependencies": {
         "cli": {
           "version": "0.6.5",
@@ -148,9 +148,14 @@
         }
       }
     },
+    "jshint-json": {
+      "version": "1.0.0",
+      "from": "jshint-json@^1.0.0",
+      "resolved": "http://registry.npmjs.org/jshint-json/-/jshint-json-1.0.0.tgz"
+    },
     "jshint-stylish": {
       "version": "1.0.0",
-      "from": "jshint-stylish@",
+      "from": "jshint-stylish@1.0.0",
       "resolved": "http://registry.npmjs.org/jshint-stylish/-/jshint-stylish-1.0.0.tgz",
       "dependencies": {
         "chalk": {
@@ -175,7 +180,7 @@
               "dependencies": {
                 "ansi-regex": {
                   "version": "0.2.1",
-                  "from": "ansi-regex@^0.2.1",
+                  "from": "ansi-regex@^0.2.0",
                   "resolved": "http://npm.finntech.no/internal/ansi-regex/-/ansi-regex-0.2.1.tgz"
                 }
               }
@@ -187,7 +192,7 @@
               "dependencies": {
                 "ansi-regex": {
                   "version": "0.2.1",
-                  "from": "ansi-regex@^0.2.1",
+                  "from": "ansi-regex@^0.2.0",
                   "resolved": "http://npm.finntech.no/internal/ansi-regex/-/ansi-regex-0.2.1.tgz"
                 }
               }
@@ -232,7 +237,7 @@
     },
     "sync-exec": {
       "version": "0.4.0",
-      "from": "sync-exec@",
+      "from": "sync-exec@0.4.0",
       "resolved": "http://registry.npmjs.org/sync-exec/-/sync-exec-0.4.0.tgz"
     }
   }
