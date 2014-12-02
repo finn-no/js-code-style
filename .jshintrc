@@ -1,19 +1,5 @@
 {
-    "globals": {
-        "jQuery"    : false,
-        "$"         : false,
-        "sinon"     : false,
-        "describe"  : false,
-        "it"        : false,
-        "xit"       : false,
-        "expect"    : false,
-        "before"    : false,
-        "after"     : false,
-        "beforeEach": false,
-        "afterEach" : false,
-        "assert"    : false,
-        "contain"   : false
-    },
+    "globals": {},
 
     "bitwise"       : true,
     "camelcase"     : true,
