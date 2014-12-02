@@ -87,15 +87,4 @@ In Gruntfile.js
 See [JSHint docs](http://www.jshint.com/docs/options/)
 
 
-## Inline configuration
-
-Once in a while you *have* to override a rule in just one file. For instance `eval` is evil, but maybe you actually have to use it for something that is not possible to solve in another way. Like async loading of advertisement, or actually generating dynamic code, which `eval` was meant for (but abused).
-
-In addition to using configuration files you can configure JSHint from within your files using special comments. These comments start either with jshint or global and are followed by a comma-separated list of values. For example, the following snippet will enable warnings about undefined and unused variables and tell JSHint about a global variable named MY_GLOBAL.
-
-    /* jshint evil: true */
-    /* global MY_GLOBAL */
-
-You can use both multi- and single-line comments to configure JSHint. These comments are function scoped meaning that if you put them inside a function they will affect only this function's code.
-
 [More jshint docs](http://www.jshint.com/docs/)
