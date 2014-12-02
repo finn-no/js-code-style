@@ -6,7 +6,7 @@
     "curly"         : true,
     "eqeqeq"        : false,
     "es3"           : false,
-    "forin"         : false,
+    "forin"         : true,
     "freeze"        : false,
     "immed"         : true,
     "indent"        : 4,
