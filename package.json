@@ -7,7 +7,7 @@
     "finn-js-code-style": "./bin/finn-js-code-style"
   },
   "scripts": {
-    "test": "./node_modules/.bin/lab test/*.test.js"
+    "test": "./node_modules/.bin/lab test/*.test.js && ./bin/finn-js-code-style bin lib"
   },
   "author": "FINN.no AS",
   "license": "MIT",
