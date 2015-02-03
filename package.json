@@ -25,7 +25,6 @@
   "dependencies": {
     "jshint": "2.5.10",
     "jshint-json": "^1.0.0",
-    "jshint-stylish": "1.0.0",
-    "shelljs": "0.3.0"
+    "jshint-stylish": "1.0.0"
   }
 }
