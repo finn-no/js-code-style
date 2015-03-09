@@ -15,7 +15,12 @@ Add a pull-request if you want to change something and we can discuss on the pul
 
 This command will run jshint on the files you specify. In the future, it will probably do more code style checks on the same set of files.
 
-    finn-js-code-style <file | dir>...
+    finn-js-code-style [options] <file | dir>...
+
+### Options
+
+* `--help` Usage info
+* `--fail` Exit with code 1 when errors are generated
 
 ## Config
 
