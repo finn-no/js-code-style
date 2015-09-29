@@ -1,0 +1,12 @@
+{
+  "libs": [],
+  "loadEagerly": [
+    "lib/**/*.js",
+    "bin/**/*.js",
+    "test/**/*.js"
+  ],
+  "plugins": {
+    "complete_strings": {},
+    "node": {}
+  }
+}
