@@ -20,10 +20,10 @@
   },
   "devDependencies": {
     "jscs": "^1.7.3",
-    "lab": "^5.0.1"
+    "lab": "^6.1.0"
   },
   "dependencies": {
-    "jshint": "2.5.10",
+    "jshint": "^2.8.0",
     "jshint-json": "^1.0.0",
     "jshint-stylish": "^2.0.1",
     "resolve-bin": "^0.3.0"
