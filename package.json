@@ -19,6 +19,7 @@
     "url": "https://github.com/finn-no/js-code-style/issues"
   },
   "devDependencies": {
+    "expect": "^1.11.1",
     "jscs": "^1.7.3",
     "lab": "^6.1.0"
   },
@@ -26,6 +27,7 @@
     "jshint": "^2.8.0",
     "jshint-json": "^1.0.0",
     "jshint-stylish": "^2.0.1",
-    "resolve-bin": "^0.3.0"
+    "resolve-bin": "^0.3.0",
+    "yargs": "^3.26.0"
   }
 }

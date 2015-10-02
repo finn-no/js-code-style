@@ -1,3 +1,36 @@
 #!/usr/bin/env node
+var EXTRA_INFO = [
+    'Use the .jshintrc file for jshint config',
+    'Use the .jshintignore to exclude files or folders'
+].join('\n');
 
-require("../lib/cli.js")(process.argv.slice(2));
+var argv = require('yargs')
+    .usage('Usage: finn-js-code-style [options] <file | dir>...')
+    .demand(1)
+    .options({
+        fail: {
+            default: false,
+            describe: 'shortcut for --max-errors 0 --max-warnings 0',
+            type: 'boolean'
+        },
+        E: {
+            alias: 'max-errors',
+            describe: 'exit with err code when exceeding max-errors'
+        },
+        W: {
+            alias: 'max-warnings',
+            describe: 'exit with err code when exceeding max-warnings'
+        }
+    })
+    .help('help')
+    .example('finn-js-code-style lib')
+    .epilog(EXTRA_INFO)
+    .argv;
+
+argv.files = argv._;
+if (argv.fail) {
+    argv.maxErrors = argv.E = 0;
+    argv.maxWarnings = argv.W = 0;
+    delete argv.fail;
+}
+require('../lib/cli.js')(argv);
