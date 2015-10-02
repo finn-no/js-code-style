@@ -28,21 +28,21 @@ lab.test('CLI exits successfullt when generating errors and runned without optio
 
 lab.test('CLI exits with code 2 when generating errors and runned with --max-warnings 1', function (done) {
     var cmd = [binPath, '--max-warnings 1', failingJsPath].join(' ');
-    assertBinError(cmd, 'Max warnings exceeded! (Max 1, but was 2)', done);
+    assertBinError(cmd, '(Max warnings 1, but was 2)', done);
 });
 
 lab.test('CLI exits with code 2 when generating errors and runned with --max-errors 1', function (done) {
     var cmd = [binPath, '--max-errors 0', errorJsPath].join(' ');
-    assertBinError(cmd, 'Max errors exceeded! (Max 0, but was 1)', done);
+    assertBinError(cmd, '(Max errors 0, but was 1)', done);
 });
 
 
 lab.test('CLI exits with code 2 when generating warnings and runned with --fail', function (done) {
     var cmd = [binPath, '--fail', failingJsPath].join(' ');
-    assertBinError(cmd, 'Max warnings exceeded! (Max 0, but was 2)', done);
+    assertBinError(cmd, '(Max warnings 0, but was 2)', done);
 });
 
 lab.test('CLI exits with code 2 when generating errors and runned with --fail', function (done) {
     var cmd = [binPath, '--fail', errorJsPath].join(' ');
-    assertBinError(cmd, 'Max errors exceeded! (Max 0, but was 1)', done);
+    assertBinError(cmd, '(Max errors 0, but was 1)', done);
 });
