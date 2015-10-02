@@ -7,7 +7,11 @@
     "finn-js-code-style": "./bin/finn-js-code-style"
   },
   "scripts": {
-    "test": "./node_modules/.bin/lab test/*.test.js && ./bin/finn-js-code-style bin lib"
+    "test": "./node_modules/.bin/lab test/*.test.js && ./bin/finn-js-code-style bin lib",
+    "release:patch": "npm version patch && npm run push-package-publish",
+    "release:minor": "npm version minor && npm run push-package-publish",
+    "release:major": "npm version major && npm run push-package-publish",
+    "push-package-publish": "git push --follow-tags && npm publish"
   },
   "author": "FINN.no AS",
   "license": "MIT",

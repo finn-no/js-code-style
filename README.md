@@ -104,8 +104,15 @@ See [JSHint docs](http://www.jshint.com/docs/options/)
 
 ## Release a new version
 
-    git pull --rebase
-    npm version [<newversion> | major | minor | patch] # follow semver!
-    git push --follow-tags origin master
-    npm login # login with finn-no credentials
-    npm publish
+    # patch version
+    $ npm run release:patch
+
+    # minor version
+    $ npm run release:minor
+
+    # major version
+    $ npm run release:major
+
+    # special versions (alpha/beta/etc) 1.2.3-beta.1
+    $ npm version <newversion>
+    $ NPM_CONFIG_TAG=<tag> npm run push-package-publish
