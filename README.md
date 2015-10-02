@@ -20,7 +20,13 @@ This command will run jshint on the files you specify. In the future, it will pr
 ### Options
 
 * `--help` Usage info
-* `--fail` Exit with code 1 when errors are generated
+* `--max-warnings <number>` Exit when more warnings than `max-warnings`
+* `--max-errors <number>` Exit when more errors than `max-errors`
+* `--fail` Exit when warnings/errors are generated
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for what has changed since last release
 
 ## Config
 
@@ -86,7 +92,7 @@ In Gruntfile.js
 
     - Open prefrences in Intellij.
     - Under Project Settings find: JavaScript -> Code Quality Tools -> JSHint.
-    - Check off for "Enable", "Use config files" and "2.5.6".
+    - Check off for "Enable", "Use config files" and "2.8.0".
 
 
 ## Wondering what all these options mean?
