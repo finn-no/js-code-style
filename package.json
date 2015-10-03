@@ -28,7 +28,7 @@
     "lab": "^6.1.0"
   },
   "dependencies": {
-    "jshint": "^2.8.0",
+    "jshint": "2.8.0",
     "jshint-json": "^1.0.0",
     "jshint-stylish": "^2.0.1",
     "yargs": "^3.26.0"
