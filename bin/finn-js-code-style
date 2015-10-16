@@ -13,6 +13,10 @@ var argv = require('yargs')
             describe: 'shortcut for --max-errors 0 --max-warnings 0',
             type: 'boolean'
         },
+        env: {
+            describe: 'environment specific linting (allows multiple)',
+            choices: ['es6', 'es6-modules', 'node', 'react']
+        },
         E: {
             alias: 'max-errors',
             describe: 'exit with err code when exceeding max-errors'
