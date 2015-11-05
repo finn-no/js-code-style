@@ -2,6 +2,18 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.0.0-beta.9] - 2015-11-05
+
+### Bug fixes
+
+* Use require.resolve to locate jshint binary, so it works with deduped dependencies in npm >= 3.x
+
+## [5.0.0-beta.9] - 2015-10-26
+
+### Bug fixes
+
+* Increase jshint timeout so it doesn't fail on slow build servers
+
 ## [5.0.0-beta.3] - 2015-10-03
 
 * Fix: jshint 2.9.0 has a regression bug. Stay on jshint 2.8.0.
