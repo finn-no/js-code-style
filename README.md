@@ -9,80 +9,93 @@ Add a pull-request if you want to change something and we can discuss on the pul
 
 ## Install
 
-    npm install --save-dev finn-js-code-style
+```bash
+$ npm install --save-dev finn-js-code-style
+```
 
 ## Use
 
-This command will run jshint on the files you specify. In the future, it will probably do more code style checks on the same set of files.
+This command will validate code style on the files you specify. In the future, it will probably do more code style checks on the same set of files.
 
-    finn-js-code-style [options] <file | dir>...
+```bash
+$ finn-js-code-style [options] <file | dir>...
+```
 
 ### Options
 
 * `--help` Usage info
+* `--env` Environment specific code style rules
 * `--max-warnings <number>` Exit when more warnings than `max-warnings`
 * `--max-errors <number>` Exit when more errors than `max-errors`
 * `--fail` Exit when warnings/errors are generated
 
-## Changelog
-
-See [CHANGELOG.md](CHANGELOG.md) for what has changed since last release
-
 ## Config
 
-The config should be in the dot-files instead of hard-coded in build scripts. That makes it possible for editor plugins to auto-detect the config.
+### Environment
 
-If you already have a `.jshintrc` file; add the line below and remove all old rules. If you don't have it, finn-js-code-style will generate it the first time you run the command.
+Available environment rule set configured with the `--env` option are listed in the [ESLint config for Schibsted](https://www.npmjs.com/package/eslint-config-spt#rule-packs).
 
-    "extends": "./node_modules/finn-js-code-style/.jshintrc"
+```bash
+$ finn-js-code-style --env=node server.js
 
-The `extends` option became usable in [jshint v2.5.1](https://github.com/jshint/jshint/releases/tag/2.5.1), so make sure the version you use (also editor plugins) at least have this version.
+# ..even multiple environments
+$ finn-js-code-style --env=node --env=es6 server.js
+```
 
-It is possible to extend js-code-style with a project-specific config, but we only allow a more strict set of rules or change the environment (node/browser). The project globals should also be defined here (if you have any), and will extend the parent´s globals (instead of overwriting).
+Not to be confused with ESLint environments, these are described in the section below.
+
+### Explicit code style rules
+
+It is possible to extend js-code-style with one or more project specific config(s), but we only allow a more strict set of rules or change the environment (node/browser). The project globals should also be defined here (if you have any), and will extend the parent´s globals (instead of overwriting).
+
+Explicit rules are configured with `.eslintrc` files. These configs should be in dot-files, instead of hard-coded in build scripts. That makes it possible for editor plugins to auto-detect the config.
+
+List of all roules are available in [ESLint rules docs](http://eslint.org/docs/rules/).
 
 You can also use `extends` to have different config for tests or similar:
 
-./.jshintrc
+**./.eslintrc**
+```json
+{
+    "max-statements": [2, 2]
+}
+```
 
-    {
-        "extends": "./node_modules/finn-js-code-style/.jshintrc",
-        "browser": true,
-        "node": false,
-        "maxstatements": 10
+**./test/.eslintrc**
+```json
+{
+    "extends": "../.eslintrc",
+    "env": {
+        "mocha": true
     }
+}
+```
 
-./test/.jshintrc
+Predefined ESLint environments specified in `env` are listed on in [ESLint docs](http://eslint.org/docs/user-guide/configuring#specifying-environments).
 
-    {
-        "extends": "../.jshintrc",
-        "globals": {
-            "suite": true,
-            "test": true,
-            "setup": true,
-            "teardown": true,
-            "assert": true
-        }
-    }
-
-Use the `.jshintignore` to exclude files or folders.
+Use `.eslintignore` to exclude files or folders.
 
 ## Grunt config
 
-    npm install --save-dev grunt-exec
+```bash
+$ npm install --save-dev grunt-exec
+```
 
 In Gruntfile.js
 
-    grunt.loadNpmTasks('grunt-exec');
+```js
+grunt.loadNpmTasks('grunt-exec');
 
-    grunt.initConfig({
-        //...,
-        exec: {
-            finn_js_code_style: {
-                cmd: 'finn-js-code-style src'
-            }
-        },
-        //...
-    });
+grunt.initConfig({
+    //...,
+    exec: {
+        finn_js_code_style: {
+            cmd: 'finn-js-code-style src'
+        }
+    },
+    //...
+});
+```
 
 ## For Sublime
 
@@ -97,22 +110,25 @@ In Gruntfile.js
 
 ## Wondering what all these options mean?
 
-See [JSHint docs](http://www.jshint.com/docs/options/)
-
-
-[More jshint docs](http://www.jshint.com/docs/)
+See [ESLint configuration docs](http://eslint.org/docs/user-guide/configuring.html) and [ESLint rules docs(http://eslint.org/docs/rules/).
 
 ## Release a new version
 
-    # patch version
-    $ npm run release:patch
+```bash
+# patch version
+$ npm run release:patch
 
-    # minor version
-    $ npm run release:minor
+# minor version
+$ npm run release:minor
 
-    # major version
-    $ npm run release:major
+# major version
+$ npm run release:major
 
-    # special versions (alpha/beta/etc) 1.2.3-beta.1
-    $ npm version <newversion>
-    $ NPM_CONFIG_TAG=<tag> npm run push-package-publish
+# special versions (alpha/beta/etc) 1.2.3-beta.1
+$ npm version <newversion>
+$ NPM_CONFIG_TAG=<tag> npm run push-package-publish
+```
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for what has changed since last release
