@@ -1,4 +1,4 @@
-function namedFunction() {
+function namedFunction () {
 
 }
 

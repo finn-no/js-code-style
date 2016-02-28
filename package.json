@@ -27,8 +27,8 @@
     "lab": "^6.1.0"
   },
   "dependencies": {
-    "eslint": "^1.6.0",
-    "eslint-config-spt": "^1.0.7",
+    "eslint": "^2.2.0",
+    "eslint-config-finn": "^1.0.0@alpha",
     "yargs": "^3.26.0"
   }
 }

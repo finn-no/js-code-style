@@ -1,21 +1,23 @@
 #!/usr/bin/env node
+var MIN_NON_OPTIONS = 1;
 var EXTRA_INFO = [
-    'Use the .jshintrc file for jshint config',
-    'Use the .jshintignore to exclude files or folders'
+    'Use the .eslintrc file for eslint config',
+    'Use the .eslintignore to exclude files or folders'
 ].join('\n');
 
 var argv = require('yargs')
     .usage('Usage: finn-js-code-style [options] <file | dir>...')
-    .demand(1)
+    .demand(MIN_NON_OPTIONS)
     .options({
+        config: {
+            alias: 'c',
+            describe: 'Specify config instead of using the .eslintrc default',
+            type: 'string'
+        },
         fail: {
             default: false,
             describe: 'shortcut for --max-errors 0 --max-warnings 0',
             type: 'boolean'
-        },
-        env: {
-            describe: 'environment specific linting (allows multiple)',
-            choices: ['es6', 'es6-modules', 'node', 'react']
         },
         E: {
             alias: 'max-errors',
@@ -37,4 +39,5 @@ if (argv.fail) {
     argv.maxWarnings = argv.W = 0;
     delete argv.fail;
 }
+
 require('../lib/cli.js')(argv);
