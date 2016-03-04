@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "expect": "^1.11.1",
-    "lab": "^6.1.0"
+    "lab": "^10.2.0"
   },
   "dependencies": {
     "eslint": "^2.2.0",
