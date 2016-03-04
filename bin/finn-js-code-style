@@ -1,17 +1,31 @@
 #!/usr/bin/env node
+var semver = require('semver');
+var yargs = require('yargs');
+var cli = require('../lib/cli.js');
+
 var MIN_NON_OPTIONS = 1;
 var EXTRA_INFO = [
     'Use the .eslintrc file for eslint config',
     'Use the .eslintignore to exclude files or folders'
 ].join('\n');
 
-var argv = require('yargs')
+var NODE_VERSION = semver.clean(process.version);
+if (!semver.satisfies(NODE_VERSION, '>=4.0.0')) {
+    console.error('finn-js-code-style requires Node.js 4.x or newer. You have %s installed.', NODE_VERSION);
+    process.exit(1);
+}
+
+var argv = yargs
     .usage('Usage: finn-js-code-style [options] <file | dir>...')
     .demand(MIN_NON_OPTIONS)
     .options({
         config: {
             alias: 'c',
             describe: 'Specify config instead of using the .eslintrc default',
+            type: 'string'
+        },
+        env: {
+            describe: 'specify environments',
             type: 'string'
         },
         fail: {
@@ -40,4 +54,4 @@ if (argv.fail) {
     delete argv.fail;
 }
 
-require('../lib/cli.js')(argv);
+cli(argv);
