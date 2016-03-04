@@ -2,6 +2,16 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.0.0] - 2016-03-04
+
+We're working on switching to ESLint, but this beta has been waiting way too long. So releasing the beta 9 with minor changes.
+
+ESLint will be a new major release because it will have breaking changes (new set of rules).
+
+* Updated to jshint 2.9.1
+* Removed jscs-files
+* Small code refactor
+
 ## [5.0.0-beta.9] - 2015-11-05
 
 ### Bug fixes
