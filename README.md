@@ -17,7 +17,7 @@ Create a file named .eslintrc
 
 ```json
 {
-    "extends": "finn",
+    "extends": "finn"
 }
 ```
 
@@ -105,7 +105,7 @@ Explicit rules are configured with `.eslintrc` files. These configs should be in
 
 List of all rules are available in [ESLint rules docs](http://eslint.org/docs/rules/).
 
-You can also use `extends` to have different config for tests or similar:
+You can have different configurations for tests or similar. An `.eslintrc`-file in any project folder will automatically extend the project-root config:
 
 **./.eslintrc**
 ```json
@@ -118,9 +118,11 @@ You can also use `extends` to have different config for tests or similar:
 **./test/.eslintrc**
 ```json
 {
-    "extends": "../.eslintrc",
     "env": {
         "mocha": true
+    },
+    "globals": {
+        "sinon": true
     }
 }
 ```
