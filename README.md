@@ -157,7 +157,7 @@ grunt.initConfig({
 
 ## Wondering what all these options mean?
 
-See [ESLint configuration docs](http://eslint.org/docs/user-guide/configuring.html) and [ESLint rules docs(http://eslint.org/docs/rules/).
+See [ESLint configuration docs](http://eslint.org/docs/user-guide/configuring.html) and [ESLint rules docs](http://eslint.org/docs/rules/).
 
 ## Release a new version
 
