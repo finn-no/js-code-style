@@ -4,7 +4,7 @@ This project is meant for internal JS-code at FINN.no, but we have many public J
 
 ## Based on ESLint
 
-From version 5.0.0 finn-js-code-style use ESLint under the hood instead of JSLint, so the .jshintrc file is not in use anymore. ESLint was chosen because of better ES2015-support and is more extensible, while it seems like JSHint is less maintained at the moment.
+From version 6.0.0-alpha.1 finn-js-code-style use ESLint under the hood instead of JSLint. So the .jshintrc file is not in use anymore. ESLint was chosen because of better ES2015-support and it's more extensible, while it seems like JSHint is less maintained at the moment.
 
 ### Migrate config from JSHint
 
@@ -104,6 +104,7 @@ It is possible to extend js-code-style with one or more project specific config(
 Explicit rules are configured with `.eslintrc` files. These configs should be in dot-files, instead of hard-coded in build scripts. That makes it possible for editor plugins to auto-detect the config.
 
 List of all rules are available in [ESLint rules docs](http://eslint.org/docs/rules/).
+List of [rules and settings](https://github.com/finn-no/eslint-config-finn/blob/master/rules.md) used in eslint-config-finn.
 
 You can have different configurations for tests or similar. An `.eslintrc`-file in any project folder will automatically extend the project-root config:
 
@@ -152,16 +153,6 @@ grunt.initConfig({
     //...
 });
 ```
-
-## For Sublime
-
-    - Install plugin...
-
-## For Intellij
-
-    - Open prefrences in Intellij.
-    - Under Project Settings find: JavaScript -> Code Quality Tools -> JSHint.
-    - Check off for "Enable", "Use config files" and "2.8.0".
 
 
 ## Wondering what all these options mean?
