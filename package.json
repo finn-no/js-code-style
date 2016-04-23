@@ -27,7 +27,7 @@
     "lab": "^10.2.0"
   },
   "dependencies": {
-    "eslint": "^2.2.0",
+    "eslint": "^2.8.0",
     "eslint-config-finn": "^1.0.0-alpha.2",
     "semver": "^5.1.0",
     "yargs": "^3.26.0"
