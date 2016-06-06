@@ -1,5 +1,7 @@
 {
-    "extends": "../.eslintrc",
+    "extends": [
+        "finn"
+    ],
     "env": {
         "node": true,
         "mocha": true

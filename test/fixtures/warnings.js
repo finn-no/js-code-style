@@ -1,4 +1,5 @@
-var unused = 1;
+'use strict';
+const unused = 1;
 // multiple blank lines results in warnings..
 
 

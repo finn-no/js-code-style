@@ -1,16 +1,20 @@
+'use strict';
 function namedFunction () {
 
 }
 
 namedFunction();
 
-var obj = {
+const obj = {
     key: 'value'
 };
 
 namedFunction(obj);
 
-var a = 1;
-var b = 2;
+const a = 1;
+const b = 2;
+let c = 0;
 
-namedFunction(a, b);
+c = 3;
+
+namedFunction(a, b, c);
