@@ -23,13 +23,13 @@
     "url": "https://github.com/finn-no/js-code-style/issues"
   },
   "devDependencies": {
-    "expect": "^1.11.1",
+    "expect": "^1.18.0",
     "lab": "^10.2.0"
   },
   "dependencies": {
     "eslint": "^2.8.0",
     "eslint-config-finn": "^1.0.0-alpha.3",
     "semver": "^5.1.0",
-    "yargs": "^3.26.0"
+    "yargs": "^4.6.0"
   }
 }
